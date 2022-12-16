@@ -5,13 +5,13 @@ import com.github.nogueiralegacy.jogoDaVelha.domain.Jogo;
 import java.util.Scanner;
 
 public class CriaJogo {
-    public void jogar() {
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
+    public void jogar() {
         Jogo jogo = new Jogo();
 
         while (true) {
-            System.out.println("--Jogo da Velha--");
+            System.out.println("---Jogo da Velha---");
             System.out.print(jogo.getTabuleiro().toString() + "\n");
             if (jogo.getCountJogadas() % 2 == 0) {
                 System.out.print("Jogador X ");
@@ -21,48 +21,50 @@ public class CriaJogo {
             System.out.println("digite uma linha e uma coluna para fazer sua jogada");
             System.out.println("Exemplo:1 1");
 
-            int linha;
-            int coluna;
-            try {
-                linha = sc.nextInt();
-                coluna = sc.nextInt();
-            } catch (Exception e) {
-                System.out.println("Digite um número válido");
-                sc.nextLine();
-                continue;
-            }
+            validaJogada(jogo);
 
-            if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
-                System.out.println("Digite um número entre 1 e 3");
-                continue;
-            }
-
-            while (true) {
-                if (jogo.getTabuleiro().casaOcupada(linha - 1, coluna - 1)) {
-                    System.out.println("Casa já ocupada, digite outra linha e coluna");
-                    System.out.println("Exemplo:1 1");
-                    linha = sc.nextInt();
-                    coluna = sc.nextInt();
-                } else {
-                    break;
-                }
-            }
-
-            jogo.jogada(linha - 1, coluna - 1);
-
-            if (jogo.verificaEmpate()) {
+            if (jogo.validaVitoria("X")) {
+                System.out.println("---Jogo da Velha---");
+                System.out.print(jogo.getTabuleiro().toString() + "\n");
+                System.out.println("Jogador X venceu!");
+                return;
+            } else if (jogo.validaVitoria("O")) {
+                System.out.println("---Jogo da Velha---");
+                System.out.print(jogo.getTabuleiro().toString() + "\n");
+                System.out.println("Jogador O venceu!");
+                return;
+            } else if (jogo.verificaEmpate()) {
+                System.out.println("---Jogo da Velha---");
+                System.out.print(jogo.getTabuleiro().toString() + "\n");
                 System.out.println("Deu velha!");
                 return;
             }
+        }
+    }
 
-            if (jogo.validaVitoria("X")) {
-                System.out.println("Jogador X venceu!");
-                return;
-            }
+    public void validaJogada(Jogo jogo) {
+        int linha;
+        int coluna;
 
-            if (jogo.validaVitoria("O")) {
-                System.out.println("Jogador O venceu!");
-                return;
+        while (true) {
+            try {
+                linha = sc.nextInt();
+                coluna = sc.nextInt();
+
+                if (linha < 1 || linha > 3 || coluna < 1 || coluna > 3) {
+                    System.out.println("Digite um número entre 1 e 3");
+                    continue;
+                }
+                if (jogo.getTabuleiro().casaOcupada(linha - 1, coluna - 1)) {
+                    System.out.println("Casa já ocupada, digite outra linha e coluna");
+                    continue;
+                }
+                jogo.jogada(linha - 1, coluna - 1);
+
+                break;
+            } catch (Exception e) {
+                System.out.println("Digite apenas números");
+                sc.nextLine();
             }
         }
     }

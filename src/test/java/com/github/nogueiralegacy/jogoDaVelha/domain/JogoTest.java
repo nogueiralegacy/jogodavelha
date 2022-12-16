@@ -35,28 +35,6 @@ public class JogoTest {
     }
 
     @Test
-    public void jogadaEmCasaVazia() {
-        Jogo jogo = new Jogo();
-
-        assertTrue(jogo.jogada(0, 0));
-    }
-
-    @Test
-    public void jogadaEmCasaOcupada() {
-        Jogador jogadorX = new Jogador("X");
-        Jogador jogadorO = new Jogador("O");
-
-        Tabuleiro tabuleiro = new Tabuleiro();
-        Jogo jogo = new Jogo();
-
-        //JogadorX faz a jogada, o jogadorX sempre joga primeiro.
-        jogo.jogada(0, 0);
-
-        //JogadorO tenta fazer a jogada, mas a casa já está ocupada.
-        assertFalse(jogo.jogada(0, 0));
-    }
-
-    @Test
     public void contaJogadas() {
         Jogo jogo = new Jogo();
 
@@ -69,14 +47,14 @@ public class JogoTest {
     }
 
     @Test
-    public void limpaTabuleiro() {
+    public void reiniciaJogo() {
         Jogo jogo = new Jogo();
         jogo.jogada(0, 0);
         jogo.jogada(0, 1);
         jogo.jogada(1, 0);
         jogo.jogada(1, 1);
 
-        jogo.limpaTabuleiro();
+        jogo.reiniciaJogo();
 
         assertTrue(jogo.getCountJogadas() == 0);
     }

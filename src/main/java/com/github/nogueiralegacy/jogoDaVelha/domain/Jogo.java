@@ -12,19 +12,14 @@ public class Jogo {
         tabuleiro = new Tabuleiro();
     }
 
-    public boolean jogada(int linha, int coluna) {
-        if (!tabuleiro.casaOcupada(linha, coluna)) {
+    public void jogada(int linha, int coluna) {
             if (getJogadorDaVez().equals(jogadorX)) {
                 jogadorX.fazerJogada(tabuleiro, linha, coluna);
             } else {
                 jogadorO.fazerJogada(tabuleiro, linha, coluna);
             }
+
             countJogadas++;
-
-            return true;
-        }
-
-        return false;
     }
 
     public boolean validaVitoria(String identificador) {
@@ -63,7 +58,7 @@ public class Jogo {
         return countJogadas == 9;
     }
 
-    public void limpaTabuleiro() {
+    public void reiniciaJogo() {
         tabuleiro.limpa();
         countJogadas = 0;
     }
