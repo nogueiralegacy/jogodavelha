@@ -33,9 +33,9 @@ public class Tabuleiro {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("    0     1    2\n");
+        sb.append("    1     2    3\n");
         for (int indiceLinha = 0; indiceLinha < 3; indiceLinha++) {
-            sb.append(indiceLinha + " ");
+            sb.append(indiceLinha + 1 + " ");
             for (int indiceColuna = 0; indiceColuna < 3; indiceColuna++) {
                 sb.append("  " + casas[indiceLinha][indiceColuna] + "  ");
                 if (indiceColuna < 2) {
