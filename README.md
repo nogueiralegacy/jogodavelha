@@ -9,7 +9,7 @@ Essa aplicação permite duas pessoas jogarem jogo da velha pelo terminal.
     
 ## Como gerar o jar file executavel
 - Acessar a raiz do projeto `..\jogoDaVelha`
-- Executar o comando `mvn package -P executavel-unicio` para gerar um único jar file executável com todas as dependências. As dependências seram baixadas automaticamente, mas pode usar o comando `mvn install` primeiramente para fazer o download delas separadamente
+- Executar o comando `mvn package -P executavel-unico` para gerar um único jar file executável com todas as dependências. As dependências seram baixadas automaticamente, mas pode usar o comando `mvn install` primeiramente para fazer o download delas separadamente
 - Executar o comando `java -jar target\jogoDaVelha-console-exec.jar` para iniciar o jogo
 
 ## Arquivo executavel nativo
