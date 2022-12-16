@@ -3,7 +3,7 @@ package com.github.nogueiralegacy.jogoDaVelha.domain;
 public class Jogador {
     private String identificador;
 
-    Jogador(String identificador) {
+    public Jogador(String identificador) {
         this.identificador = identificador;
     }
 

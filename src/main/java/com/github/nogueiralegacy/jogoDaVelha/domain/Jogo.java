@@ -14,7 +14,7 @@ public class Jogo {
 
     public boolean jogada(int linha, int coluna) {
         if (!tabuleiro.casaOcupada(linha, coluna)) {
-            if (countJogadas % 2 == 0) {
+            if (getJogadorDaVez().equals(jogadorX)) {
                 jogadorX.fazerJogada(tabuleiro, linha, coluna);
             } else {
                 jogadorO.fazerJogada(tabuleiro, linha, coluna);
@@ -27,7 +27,7 @@ public class Jogo {
         return false;
     }
 
-    public boolean varificaVitoria(String identificador) {
+    public boolean validaVitoria(String identificador) {
         for (int indiceLinha = 0; indiceLinha < 3; indiceLinha++) {
             if (tabuleiro.getCasas()[indiceLinha][0].equals(identificador) &&
                     tabuleiro.getCasas()[indiceLinha][1].equals(identificador) &&
@@ -66,6 +66,14 @@ public class Jogo {
     public void limpaTabuleiro() {
         tabuleiro.limpa();
         countJogadas = 0;
+    }
+
+    public Jogador getJogadorDaVez() {
+        if (countJogadas % 2 == 0) {
+            return jogadorX;
+        } else {
+            return jogadorO;
+        }
     }
 
     public Jogador getJogadorX() {

@@ -96,7 +96,7 @@ public class JogoTest {
         // Jogador X
         jogo.jogada(2, 0);
 
-        assertTrue(jogo.varificaVitoria(jogadorX.getIdentificador()));
+        assertTrue(jogo.validaVitoria(jogadorX.getIdentificador()));
     }
 
     @Test
@@ -117,7 +117,7 @@ public class JogoTest {
         // Jogador O
         jogo.jogada(2, 1);
 
-        assertTrue(jogo.varificaVitoria(jogadorO.getIdentificador()));
+        assertTrue(jogo.validaVitoria(jogadorO.getIdentificador()));
     }
 
     @Test
