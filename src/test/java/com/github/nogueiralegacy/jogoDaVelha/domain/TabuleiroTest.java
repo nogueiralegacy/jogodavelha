@@ -1,5 +1,6 @@
 package com.github.nogueiralegacy.jogoDaVelha.domain;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,6 +35,7 @@ public class TabuleiroTest {
         assertFalse(tabuleiro.casaOcupada(0, 0));
     }
 
+    @Ignore
     @Test
     public void showTabuleiro() {
         Tabuleiro tabuleiro = new Tabuleiro();

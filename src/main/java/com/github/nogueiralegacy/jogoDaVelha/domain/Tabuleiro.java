@@ -33,7 +33,7 @@ public class Tabuleiro {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("    0   1   2\n");
+        sb.append("    0     1    2\n");
         for (int indiceLinha = 0; indiceLinha < 3; indiceLinha++) {
             sb.append(indiceLinha + " ");
             for (int indiceColuna = 0; indiceColuna < 3; indiceColuna++) {
