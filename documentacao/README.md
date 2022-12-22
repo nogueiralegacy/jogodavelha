@@ -11,7 +11,7 @@ Escolha um diretório a sua escolha e descomprima o arquivo .zip
 - O `PATH` para apontar para a pasta `\bin` do diretório `GraalVM`.
 - O `JAVA_HOME` para apontar para o diretório `GraalVM`.
 
-Para fazer isso de uma forma mais prática, disponibilizei um script para windows [set-graalvm.bat](https://github.com/nogueiralegacy/jogoDaVelha/documentacao). **É necessário fazer a edição do script de acordo com o caminho em que se encontra o GraalVM no seu computador**. Esse script configura o `PATH` e o `JAVA_HOME` para o GraalVM, somente na tela do promt em que foi utilizado, ou seja, não influência na configuração default utilizada no seu computador.
+Para fazer isso de uma forma mais prática, disponibilizei um script para windows [set-graalvm.bat](https://github.com/nogueiralegacy/jogoDaVelha/documentacao) no diretório de `\documentacao\utilitarios`. **É necessário fazer a edição do script de acordo com o caminho em que se encontra o GraalVM no seu computador**. Esse script configura o `PATH` e o `JAVA_HOME` para o GraalVM, somente na tela do promt em que foi utilizado, ou seja, não influência na configuração default utilizada no seu computador.
 #### 4. Utilize o comando `gu install native-image`.
 Verifique a instalação com o comando `gu list` se você visualizar o componente native-image na lista quer dizer que a instalação foi um sucesso.
 #### 5. Instale o Visual Studio Build Tools e o Windows 10 SDK
