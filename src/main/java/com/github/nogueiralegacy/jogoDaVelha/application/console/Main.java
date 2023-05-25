@@ -1,4 +1,4 @@
-package com.github.nogueiralegacy.jogoDaVelha.application.console;
+package com.github.nogueiralegacy.jogodavelha.application.console;
 
 
 import java.util.Scanner;
@@ -13,6 +13,7 @@ public class Main {
             System.out.println("Digite \"exit\" para fechar o jogo");
             System.out.println("Digite qualquer outra coisa para jogar novamente");
             if (sc.nextLine().equals("exit")) {
+                sc.close();
                 break;
             }
         }

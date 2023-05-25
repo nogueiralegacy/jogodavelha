@@ -1,14 +1,14 @@
-package com.github.nogueiralegacy.jogoDaVelha.domain;
+package com.github.nogueiralegacy.jogodavelha.domain;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Disabled;
 
 public class TabuleiroTest {
 
     @Test
-    public void tabuleiroLimpo() {
+    void tabuleiroLimpo() {
         Tabuleiro tabuleiro = new Tabuleiro();
         tabuleiro.getCasas()[0][0] = "X";
         tabuleiro.getCasas()[0][1] = "O";
@@ -21,7 +21,7 @@ public class TabuleiroTest {
     }
 
     @Test
-    public void casaOcupada() {
+    void casaOcupada() {
         Tabuleiro tabuleiro = new Tabuleiro();
         tabuleiro.getCasas()[0][0] = "X";
 
@@ -29,15 +29,18 @@ public class TabuleiroTest {
     }
 
     @Test
-    public void casaVazia() {
+    void casaVazia() {
         Tabuleiro tabuleiro = new Tabuleiro();
 
         assertFalse(tabuleiro.casaOcupada(0, 0));
     }
 
-    @Ignore
+    // Esse teste é visual foi feito somente para o desenvolvimento da interface
+    // e não deve ser executado em um teste automatizado para verificar o seu
+    // funcionamento
+    @Disabled
     @Test
-    public void showTabuleiro() {
+    void showTabuleiro() {
         Tabuleiro tabuleiro = new Tabuleiro();
         tabuleiro.getCasas()[0][0] = "X";
         tabuleiro.getCasas()[0][1] = "O";

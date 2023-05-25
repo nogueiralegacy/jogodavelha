@@ -1,26 +1,23 @@
-package com.github.nogueiralegacy.jogoDaVelha.domain;
+package com.github.nogueiralegacy.jogodavelha.domain;
 
-import org.junit.Test;
-
-import java.util.Arrays;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
 public class JogadorTest {
 
     @Test
-    public void jogadaNoLocalCerto() {
+    void jogadaNoLocalCerto() {
         Jogador jogador = new Jogador("X");
         Tabuleiro tabuleiro = new Tabuleiro();
 
         jogador.fazerJogada(tabuleiro, 0, 0);
 
-        assertTrue(!tabuleiro.getCasas()[0][0].equals(" "));
+        assertNotEquals(" ", tabuleiro.getCasas()[0][0]);
     }
 
     @Test
-    public void umaJogadaPorVez() {
+    void umaJogadaPorVez() {
         Jogador jogador = new Jogador("X");
 
         Tabuleiro tabuleiro = new Tabuleiro();
@@ -34,7 +31,7 @@ public class JogadorTest {
     }
 
     @Test
-    public void jogadaFeitaPeloIdentificadorCerto() {
+    void jogadaFeitaPeloIdentificadorCerto() {
         Jogador jogadorX = new Jogador("X");
         Jogador jogadorO = new Jogador("O");
 

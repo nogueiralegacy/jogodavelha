@@ -1,4 +1,4 @@
-package com.github.nogueiralegacy.jogoDaVelha.domain;
+package com.github.nogueiralegacy.jogodavelha.domain;
 
 import java.util.Arrays;
 

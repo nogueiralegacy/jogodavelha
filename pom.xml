@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
 
     <groupId>com.github.nogueiralegacy</groupId>
-    <artifactId>jogoDaVelha</artifactId>
+    <artifactId>jogodavelha</artifactId>
     <version>1.0</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
@@ -13,7 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.mainClass>com.github.nogueiralegacy.jogoDaVelha.application.console.Main</project.mainClass>
+        <project.mainClass>com.github.nogueiralegacy.jogodavelha.application.console.Main</project.mainClass>
     </properties>
 
     <build>
@@ -90,19 +90,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 </project>

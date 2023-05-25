@@ -1,11 +1,12 @@
-package com.github.nogueiralegacy.jogoDaVelha.domain;
+package com.github.nogueiralegacy.jogodavelha.domain;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class JogoTest {
     @Test
-    public void jogadorXComeca() {
+    void testJogadorXComeca() {
         Jogo jogo = new Jogo();
         jogo.jogada(0, 0);
 
@@ -13,7 +14,7 @@ public class JogoTest {
     }
 
     @Test
-    public void jogadasIntercaladasEntreJogadores() {
+    void jogadasIntercaladasEntreJogadores() {
         Jogo jogo = new Jogo();
 
         // Jogador X
@@ -35,7 +36,7 @@ public class JogoTest {
     }
 
     @Test
-    public void contaJogadas() {
+    void contaJogadas() {
         Jogo jogo = new Jogo();
 
         jogo.jogada(0, 0);
@@ -47,7 +48,7 @@ public class JogoTest {
     }
 
     @Test
-    public void reiniciaJogo() {
+    void reiniciaJogo() {
         Jogo jogo = new Jogo();
         jogo.jogada(0, 0);
         jogo.jogada(0, 1);
@@ -56,11 +57,11 @@ public class JogoTest {
 
         jogo.reiniciaJogo();
 
-        assertTrue(jogo.getCountJogadas() == 0);
+        assertEquals(0, jogo.getCountJogadas());
     }
 
     @Test
-    public void jogadorXGanha() {
+    void jogadorXGanha() {
         Jogo jogo = new Jogo();
         Jogador jogadorX = new Jogador("X");
         // Jogador X
@@ -78,7 +79,7 @@ public class JogoTest {
     }
 
     @Test
-    public void jogadorOGanha() {
+    void jogadorOGanha() {
         Jogo jogo = new Jogo();
         Jogador jogadorO = new Jogador("O");
 
@@ -99,7 +100,7 @@ public class JogoTest {
     }
 
     @Test
-    public void empate() {
+    void empate() {
         Jogo jogo = new Jogo();
 
         // Jogador X

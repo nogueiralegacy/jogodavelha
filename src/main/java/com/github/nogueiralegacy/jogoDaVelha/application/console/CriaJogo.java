@@ -1,8 +1,8 @@
-package com.github.nogueiralegacy.jogoDaVelha.application.console;
-
-import com.github.nogueiralegacy.jogoDaVelha.domain.Jogo;
+package com.github.nogueiralegacy.jogodavelha.application.console;
 
 import java.util.Scanner;
+
+import com.github.nogueiralegacy.jogodavelha.domain.Jogo;
 
 public class CriaJogo {
     Scanner sc = new Scanner(System.in);
