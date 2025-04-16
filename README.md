@@ -9,15 +9,16 @@ Essa aplicação permite duas pessoas jogarem jogo da velha pelo terminal.
     
 ## Gerar e executar o jar file executável
 ### Clonar o repositório
-- Comando: `git clone https://github.com/nogueiralegacy/jogoDaVelha`
+- Comando: `git clone https://github.com/nogueiralegacy/jogodavelha`
 
 ### Acessar a raiz do projeto
+cd jogodavelha
 
 ### Gerar o jar file executável
 - Executar o comando `mvn package -P executavel-unico`
 
 ### Executar o jar file
-- Basta utilizar o comando `java -jar target\jogoDaVelha-console-exec.jar` para iniciar o jogo
+- Basta utilizar o comando `java -jar target/jogodavelha-console-exec.jar` para iniciar o jogo
 - Pronto agora é só se divertir😁😁
 
 ## Arquivo executavel nativo
